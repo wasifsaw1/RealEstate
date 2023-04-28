@@ -14,10 +14,12 @@ namespace BusinessLogic.Logic
     public class PropertyBL : IPropertyBL
     {
         private readonly IPropertyBR _iPropertyBR;
+
         public PropertyBL(IPropertyBR iPropertyBR)
         {
             _iPropertyBR = iPropertyBR;
         }
+
         public async Task<List<string>> GetAllEstateNames()
         {
             return await _iPropertyBR.GetAllEstateNames();

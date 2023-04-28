@@ -17,6 +17,7 @@ namespace BusinessRepository.Repository
     {
         private readonly CommonDbContext _dbContext;
         private readonly IConfiguration _iConfiguration;
+
         public UserBR(CommonDbContext dbContext, IConfiguration iConfiguration)
         {
             _dbContext = dbContext;

@@ -14,8 +14,8 @@ namespace RealEstate.Controllers
         public ExceptionResponse Error()
         {
             var context = HttpContext.Features.Get<IExceptionHandlerFeature>();
-            var exception = context?.Error; // Your exception
-            var code = 500; // Internal Server Error by default
+            var exception = context?.Error;
+            var code = 500; 
 
             if (exception is HttpException httpException)
             {
@@ -24,7 +24,7 @@ namespace RealEstate.Controllers
 
             Response.StatusCode = code;
 
-            return new ExceptionResponse(exception); // Your error model
+            return new ExceptionResponse(exception);
         }
     }
 }

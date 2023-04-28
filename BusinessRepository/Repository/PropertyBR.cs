@@ -11,10 +11,12 @@ namespace BusinessRepository.Repository
     public class PropertyBR : IPropertyBR
     {
         private readonly CommonDbContext _dbContext;
+
         public PropertyBR(CommonDbContext dbContext)
         {
             _dbContext = dbContext;
         }
+
         public async Task<List<string>> GetAllEstateNames()
         {
             List<string> property = await _dbContext.Property.Select(x=>x.Name).ToListAsync();
